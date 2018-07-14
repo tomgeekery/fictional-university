@@ -13,6 +13,7 @@ Thumbs.db
 *.tar
 *.zip
 
+.idea
 vendor
 
 !web/
