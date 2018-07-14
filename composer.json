@@ -1,0 +1,23 @@
+{
+    "name": "Wordpress Starter Kit",
+    "description": "Wordpress with Lando for local dev and Composer for dependencies.",
+    "license": "GPL-2.0+",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress-core-installer": "^1.0",
+        "johnpbloch/wordpress": "~4.9"
+    },
+    "extra": {
+        "wordpress-install-dir": "web",
+        "installer-paths": {
+            "web/wp-content/plugins/{$name}": ["type:wordpress-plugin"],
+            "web/wp-content/themes/{$name}": ["type:wordpress-theme"],
+            "web/wp-content/mu-plugins/{$name}": ["type:wordpress-muplugin"]
+        }
+    }
+}

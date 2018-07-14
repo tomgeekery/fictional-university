@@ -1,0 +1,26 @@
+~*
+Thumbs.db
+.DS_Store
+*.log
+*.sql
+*.sqlite
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+vendor
+
+!web/
+web/*
+!web/wp-content/
+web/wp-content/*
+!web/wp-content/themes/
+web/wp-content/themes/*
+
+# Update this to exclude your custom theme directory.
+!web/wp-content/themes/fictional-university-theme/
