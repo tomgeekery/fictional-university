@@ -24,5 +24,5 @@ web/wp-content/*
 !web/wp-content/themes/
 web/wp-content/themes/*
 
-# Update this to exclude your custom theme directory.
 !web/wp-content/themes/fictional-university-theme/
+!web/wp-content/mu-plugins/
