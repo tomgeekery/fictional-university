@@ -1,4 +1,7 @@
 name: wordpress-site
 recipe: wordpress
+services:
+  appserver:
+    xdebug: true
 config:
   webroot: web
