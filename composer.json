@@ -12,7 +12,8 @@
         "johnpbloch/wordpress-core-installer": "^1.0",
         "johnpbloch/wordpress": "~4.9",
         "wpackagist-plugin/advanced-custom-fields": "^5.7",
-        "wpackagist-plugin/regenerate-thumbnails": "^3.0"
+        "wpackagist-plugin/regenerate-thumbnails": "^3.0",
+        "wpackagist-plugin/manual-image-crop": "^1.12"
     },
     "extra": {
         "wordpress-install-dir": "web",
