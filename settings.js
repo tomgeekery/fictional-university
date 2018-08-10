@@ -1,2 +1,2 @@
 exports.themeLocation = './web/wp-content/themes/fictional-university-theme/';
-exports.urlToPreview = 'https://wordpresssite.lndo.site';
+exports.urlToPreview = 'http://wordpresssite.lndo.site';
