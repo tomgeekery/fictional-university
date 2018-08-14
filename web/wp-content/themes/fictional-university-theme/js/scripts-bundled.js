@@ -129,6 +129,18 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 
 /***/ }),
 
+/***/ "./web/wp-content/themes/fictional-university-theme/js/modules/Search.js":
+/*!*******************************************************************************!*\
+  !*** ./web/wp-content/themes/fictional-university-theme/js/modules/Search.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Search = function Search() {\n  _classCallCheck(this, Search);\n\n  alert(\"Search\");\n};\n\nvar _default = Search;\nexports.default = _default;\n\n//# sourceURL=webpack:///./web/wp-content/themes/fictional-university-theme/js/modules/Search.js?");
+
+/***/ }),
+
 /***/ "./web/wp-content/themes/fictional-university-theme/js/scripts.js":
 /*!************************************************************************!*\
   !*** ./web/wp-content/themes/fictional-university-theme/js/scripts.js ***!
@@ -137,7 +149,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _jquery = _interopRequireDefault(__webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"));\n\nvar _slickCarousel = _interopRequireDefault(__webpack_require__(/*! slick-carousel */ \"./node_modules/slick-carousel/slick/slick.js\"));\n\nvar _MobileMenu = _interopRequireDefault(__webpack_require__(/*! ./modules/MobileMenu */ \"./web/wp-content/themes/fictional-university-theme/js/modules/MobileMenu.js\"));\n\nvar _HeroSlider = _interopRequireDefault(__webpack_require__(/*! ./modules/HeroSlider */ \"./web/wp-content/themes/fictional-university-theme/js/modules/HeroSlider.js\"));\n\nvar _GoogleMap = _interopRequireDefault(__webpack_require__(/*! ./modules/GoogleMap */ \"./web/wp-content/themes/fictional-university-theme/js/modules/GoogleMap.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// 3rd party packages from NPM\n// Our modules / classes\n// Instantiate a new object using our modules/classes\nvar mobileMenu = new _MobileMenu.default();\nvar heroSlider = new _HeroSlider.default();\nvar googleMap = new _GoogleMap.default();\n\n//# sourceURL=webpack:///./web/wp-content/themes/fictional-university-theme/js/scripts.js?");
+eval("\n\nvar _jquery = _interopRequireDefault(__webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"));\n\nvar _slickCarousel = _interopRequireDefault(__webpack_require__(/*! slick-carousel */ \"./node_modules/slick-carousel/slick/slick.js\"));\n\nvar _MobileMenu = _interopRequireDefault(__webpack_require__(/*! ./modules/MobileMenu */ \"./web/wp-content/themes/fictional-university-theme/js/modules/MobileMenu.js\"));\n\nvar _HeroSlider = _interopRequireDefault(__webpack_require__(/*! ./modules/HeroSlider */ \"./web/wp-content/themes/fictional-university-theme/js/modules/HeroSlider.js\"));\n\nvar _GoogleMap = _interopRequireDefault(__webpack_require__(/*! ./modules/GoogleMap */ \"./web/wp-content/themes/fictional-university-theme/js/modules/GoogleMap.js\"));\n\nvar _Search = _interopRequireDefault(__webpack_require__(/*! ./modules/Search */ \"./web/wp-content/themes/fictional-university-theme/js/modules/Search.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// 3rd party packages from NPM\n// Our modules / classes\n// Instantiate a new object using our modules/classes\nvar mobileMenu = new _MobileMenu.default();\nvar heroSlider = new _HeroSlider.default();\nvar googleMap = new _GoogleMap.default();\nvar search = new _Search.default();\n\n//# sourceURL=webpack:///./web/wp-content/themes/fictional-university-theme/js/scripts.js?");
 
 /***/ })
 
