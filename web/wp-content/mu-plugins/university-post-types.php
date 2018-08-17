@@ -36,10 +36,11 @@ function university_post_types() {
 
 	// Professor post type
 	register_post_type( 'professor', array(
-		'supports'    => array( 'title', 'editor', 'thumbnail' ),
-		'public'      => true,
-		'menu_icon'   => 'dashicons-welcome-learn-more',
-		'labels'      => array(
+		'show_in_rest' => true,
+		'supports'     => array( 'title', 'editor', 'thumbnail' ),
+		'public'       => true,
+		'menu_icon'    => 'dashicons-welcome-learn-more',
+		'labels'       => array(
 			'name'          => 'Professor',
 			'add_new_item'  => 'Add New Professor',
 			'edit_item'     => 'Edit Professor',

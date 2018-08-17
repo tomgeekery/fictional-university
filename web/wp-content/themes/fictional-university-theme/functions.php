@@ -1,5 +1,7 @@
 <?php
 
+require get_theme_file_path('/inc/search-route.php');
+
 function pageBanner( $args = array() ) {
 	if ( ! isset( $args['title'] ) ) {
 		$args['title'] = get_the_title();
