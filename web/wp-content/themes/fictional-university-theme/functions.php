@@ -32,6 +32,14 @@ function pageBanner( $args = array() ) {
 	<?php
 }
 
+function university_custom_rest() {
+	register_rest_field( 'post', 'author_name', array(
+		'get_callback' => function () {
+			return get_the_author();
+		}
+	) );
+}
+
 function university_files() {
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i' );
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
@@ -92,6 +100,7 @@ function university_map_key( $api ) {
 }
 
 add_action( 'wp_enqueue_scripts', 'university_files' );
+add_action( 'rest_api_init', 'university_custom_rest' );
 add_action( 'after_setup_theme', 'university_features' );
 add_action( 'pre_get_posts', 'university_adjust_queries' );
 
