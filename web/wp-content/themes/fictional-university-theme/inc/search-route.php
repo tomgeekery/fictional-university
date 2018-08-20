@@ -26,8 +26,10 @@ function university_search_results( $data ) {
 
 		if ( get_post_type() == 'post' or get_post_type() == 'page' ) {
 			array_push( $results['general_info'], array(
-				'title'     => get_the_title(),
-				'permalink' => get_the_permalink(),
+				'title'       => get_the_title(),
+				'permalink'   => get_the_permalink(),
+				'post_type'   => get_post_type(),
+				'author_name' => get_the_author(),
 			) );
 		}
 
