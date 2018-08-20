@@ -8,23 +8,59 @@ function university_register_search() {
 }
 
 function university_search_results( $data ) {
-	$professors = new WP_Query( array(
-		'post_type' => 'professor',
+	$main_query = new WP_Query( array(
+		'post_type' => array( 'post', 'page', 'professor', 'program', 'campus', 'event' ),
 		's'         => sanitize_text_field( $data['term'] ),
 	) );
 
-	$professor_results = array();
+	$results = array(
+		'general_info' => array(),
+		'professors'   => array(),
+		'programs'     => array(),
+		'events'       => array(),
+		'campuses'     => array(),
+	);
 
-	while ( $professors->have_posts() ) {
-		$professors->the_post();
+	while ( $main_query->have_posts() ) {
+		$main_query->the_post();
 
-		array_push( $professor_results, array(
-			'title'     => get_the_title(),
-			'permalink' => get_the_permalink(),
-		) );
+		if ( get_post_type() == 'post' or get_post_type() == 'page' ) {
+			array_push( $results['general_info'], array(
+				'title'     => get_the_title(),
+				'permalink' => get_the_permalink(),
+			) );
+		}
+
+		if ( get_post_type() == 'professor' ) {
+			array_push( $results['professors'], array(
+				'title'     => get_the_title(),
+				'permalink' => get_the_permalink(),
+			) );
+		}
+
+		if ( get_post_type() == 'program' ) {
+			array_push( $results['programs'], array(
+				'title'     => get_the_title(),
+				'permalink' => get_the_permalink(),
+			) );
+		}
+
+		if ( get_post_type() == 'campus' ) {
+			array_push( $results['campuses'], array(
+				'title'     => get_the_title(),
+				'permalink' => get_the_permalink(),
+			) );
+		}
+
+		if ( get_post_type() == 'event' ) {
+			array_push( $results['events'], array(
+				'title'     => get_the_title(),
+				'permalink' => get_the_permalink(),
+			) );
+		}
 	}
 
-	return $professor_results;
+	return $results;
 }
 
 add_action( 'rest_api_init', 'university_register_search' );
