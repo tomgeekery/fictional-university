@@ -1,11 +1,11 @@
 <div class="event-summary">
-    <a class="event-summary__date t-center" href="#">
-        <span class="event-summary__month">${ item.month }</span>
-        <span class="event-summary__day">${ item.day }</span>
+    <a class="event-summary__date t-center" href="<?php the_permalink(); ?>">
+        <span class="event-summary__month"><?php echo date('M', get_field('event_date')); ?></span>
+        <span class="event-summary__day"><?php echo date('d', get_field('event_date')); ?></span>
     </a>
     <div class="event-summary__content">
         <h5 class="event-summary__title headline headline--tiny">
-            <a href="${ item.permalink }">${ item.title }</a>
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </h5>
 
         <p>
