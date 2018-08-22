@@ -115,7 +115,7 @@ class Search {
 
     keyPressDispatcher(event) {
         if (event.keyCode === 83 && !this.isOverlayOpen && !$("input, textarea").is(":focus")) {
-            this.openOverlay();
+            this.openOverlay(event);
         }
 
         if (event.keyCode === 27 && this.isOverlayOpen) {
@@ -123,7 +123,9 @@ class Search {
         }
     }
 
-    openOverlay() {
+    openOverlay(event) {
+        event.preventDefault();
+
         this.searchOverlay.addClass("search-overlay--active");
         $("body").addClass("body-no-scroll");
 
