@@ -1,6 +1,6 @@
 <?php
 
-require get_theme_file_path('/inc/search-route.php');
+require get_theme_file_path( '/inc/search-route.php' );
 
 function pageBanner( $args = array() ) {
 	if ( ! isset( $args['title'] ) ) {
@@ -101,9 +101,28 @@ function university_map_key( $api ) {
 	return $api;
 }
 
+function university_redirect_subscribers() {
+	$user = wp_get_current_user();
+
+	if ( count( $user->roles ) == 1 && $user->roles[0] == 'subscriber' ) {
+        wp_redirect(esc_url(site_url('/')));
+        exit;
+	}
+}
+
+function university_remove_admin_bar() {
+	$user = wp_get_current_user();
+
+	if ( count( $user->roles ) == 1 && $user->roles[0] == 'subscriber' ) {
+		show_admin_bar(false);
+	}
+}
+
 add_action( 'wp_enqueue_scripts', 'university_files' );
 add_action( 'rest_api_init', 'university_custom_rest' );
 add_action( 'after_setup_theme', 'university_features' );
 add_action( 'pre_get_posts', 'university_adjust_queries' );
+add_action( 'admin_init', 'university_redirect_subscribers' );
+add_action( 'wp_loaded', 'university_remove_admin_bar' );
 
 add_filter( 'acf/fields/google_map/api', 'university_map_key' );
