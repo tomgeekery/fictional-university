@@ -4,12 +4,14 @@
 function university_post_types() {
 	// Event post type
 	register_post_type( 'event', array(
-		'supports'    => array( 'title', 'editor', 'excerpt' ),
-		'rewrite'     => array( 'slug' => 'events' ),
-		'has_archive' => true,
-		'public'      => true,
-		'menu_icon'   => 'dashicons-calendar-alt',
-		'labels'      => array(
+		'capability_type' => 'event',
+		'map_meta_cap'    => true,
+		'supports'        => array( 'title', 'editor', 'excerpt' ),
+		'rewrite'         => array( 'slug' => 'events' ),
+		'has_archive'     => true,
+		'public'          => true,
+		'menu_icon'       => 'dashicons-calendar-alt',
+		'labels'          => array(
 			'name'          => 'Events',
 			'add_new_item'  => 'Add New Event',
 			'edit_item'     => 'Edit Event',
@@ -51,12 +53,14 @@ function university_post_types() {
 
 	// Campus post type
 	register_post_type( 'campus', array(
-		'supports'    => array( 'title', 'editor', 'excerpt' ),
-		'rewrite'     => array( 'slug' => 'campuses' ),
-		'has_archive' => true,
-		'public'      => true,
-		'menu_icon'   => 'dashicons-location-alt',
-		'labels'      => array(
+		'capability_type' => 'campus',
+		'map_meta_cap'    => true,
+		'supports'        => array( 'title', 'editor', 'excerpt' ),
+		'rewrite'         => array( 'slug' => 'campuses' ),
+		'has_archive'     => true,
+		'public'          => true,
+		'menu_icon'       => 'dashicons-location-alt',
+		'labels'          => array(
 			'name'          => 'Campuses',
 			'add_new_item'  => 'Add New Campus',
 			'edit_item'     => 'Edit Campus',

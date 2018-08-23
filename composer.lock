@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da70c561509968eed574fb141354c1e1",
+    "content-hash": "d2bb5433cd0f862f20fdfaf92a5f6a18",
     "packages": [
         {
             "name": "composer/installers",
@@ -293,6 +293,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/manual-image-crop/"
+        },
+        {
+            "name": "wpackagist-plugin/members",
+            "version": "2.1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/members/",
+                "reference": "tags/2.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/members.2.1.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/members/"
         },
         {
             "name": "wpackagist-plugin/regenerate-thumbnails",

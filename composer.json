@@ -13,7 +13,8 @@
         "johnpbloch/wordpress": "~4.9",
         "wpackagist-plugin/advanced-custom-fields": "^5.7",
         "wpackagist-plugin/regenerate-thumbnails": "^3.0",
-        "wpackagist-plugin/manual-image-crop": "^1.12"
+        "wpackagist-plugin/manual-image-crop": "^1.12",
+        "wpackagist-plugin/members": "^2.1"
     },
     "extra": {
         "wordpress-install-dir": "web",
