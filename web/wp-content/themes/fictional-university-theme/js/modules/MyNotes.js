@@ -41,8 +41,9 @@ class MyNotes {
                 `).prependTo("#my-notes").hide().slideDown();
             },
             error: (response) => {
-                console.log("Sorry, create new post didn't work!!");
-                console.log(response);
+                if (response.responseText == "You have reached your note limit.") {
+                    $(".note-limit-message").addClass("active");
+                }
             },
         });
     }
@@ -107,8 +108,10 @@ class MyNotes {
             type: 'DELETE',
             success: (response) => {
                 thisNote.slideUp();
-                console.log("Congrats");
-                console.log(response);
+
+                if (response.userNoteCount < 5) {
+                    $(".note-limit-message").removeClass("active");
+                }
             },
             error: (response) => {
                 console.log("Sorry");
