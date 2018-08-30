@@ -134,6 +134,14 @@ function university_headertitle() {
 	return get_bloginfo( 'name' );
 }
 
+function university_private_note($data) {
+    if ($data['post_type'] == 'note' && $data['post_status'] != "trash") {
+	    $data['post_status'] = 'private';
+    }
+
+    return $data;
+}
+
 add_action( 'wp_enqueue_scripts', 'university_files' );
 add_action( 'rest_api_init', 'university_custom_rest' );
 add_action( 'after_setup_theme', 'university_features' );
@@ -143,5 +151,6 @@ add_action( 'admin_init', 'university_redirect_subscribers' );
 add_action( 'login_enqueue_scripts', 'university_login_css' );
 
 add_filter( 'login_headerurl', 'university_headerurl' );
-add_filter( 'acf/fields/google_map/api', 'university_map_key' );
 add_filter( 'login_headertitle', 'university_headertitle' );
+add_filter( 'acf/fields/google_map/api', 'university_map_key' );
+add_filter( 'wp_insert_post_data', 'university_private_note' );
