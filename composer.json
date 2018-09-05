@@ -14,7 +14,8 @@
         "wpackagist-plugin/advanced-custom-fields": "^5.7",
         "wpackagist-plugin/regenerate-thumbnails": "^3.0",
         "wpackagist-plugin/manual-image-crop": "^1.12",
-        "wpackagist-plugin/members": "^2.1"
+        "wpackagist-plugin/members": "^2.1",
+        "wpackagist-plugin/wp-migrate-db": "^1.0"
     },
     "extra": {
         "wordpress-install-dir": "web",

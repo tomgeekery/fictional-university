@@ -46,11 +46,12 @@ function create_like( $data ) {
 function delete_like( $data ) {
 	$like_id = sanitize_text_field( $data['like'] );
 
-	if ( get_current_user_id() == get_post_field('post_author', $like_id) && get_post_type($like_id) == 'like' ) {
-		wp_delete_post($like_id, true);
+	if ( get_current_user_id() == get_post_field( 'post_author', $like_id ) && get_post_type( $like_id ) == 'like' ) {
+		wp_delete_post( $like_id, true );
+
 		return 'Like deleted.';
 	} else {
-		die("You do not have permission to delete that.");
+		die( "You do not have permission to delete that." );
 	}
 
 }
