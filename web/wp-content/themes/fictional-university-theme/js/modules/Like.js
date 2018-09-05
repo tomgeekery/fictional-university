@@ -22,9 +22,12 @@ class Like {
 
     createLike(currentLikeBox) {
         $.ajax({
+            beforeSend: (xhr) => {
+                xhr.setRequestHeader("X-WP-Nonce", universityData.nonce);
+            },
             url: universityData.root_url + '/wp-json/university/v1/like',
             type: 'POST',
-            data: { "professorId": currentLikeBox.data("professor") },
+            data: {"professorId": currentLikeBox.data("professor")},
             success: (response) => console.log(response),
             error: (response) => console.log(response),
         });

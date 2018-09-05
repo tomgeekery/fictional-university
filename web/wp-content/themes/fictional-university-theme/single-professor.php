@@ -30,20 +30,22 @@ while ( have_posts() ) {
 
 					$exist_status = 'no';
 
-					$exist_query = new WP_Query( array(
-						'post_type'  => 'like',
-						'author' => get_current_user_id(),
-						'meta_query' => array(
-							array(
-								'key' => 'liked_professor_id',
-								'compare' => '=',
-								'value' => get_the_ID(),
+					if (is_user_logged_in()) {
+						$exist_query = new WP_Query( array(
+							'post_type'  => 'like',
+							'author' => get_current_user_id(),
+							'meta_query' => array(
+								array(
+									'key' => 'liked_professor_id',
+									'compare' => '=',
+									'value' => get_the_ID(),
+								),
 							),
-						),
-					) );
+						) );
 
-					if ($exist_query->found_posts) {
-					    $exist_status = 'yes';
+						if ($exist_query->found_posts) {
+							$exist_status = 'yes';
+						}
                     }
 
 					?>
